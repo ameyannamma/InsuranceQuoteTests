@@ -33,35 +33,24 @@ public class InsuranceQuoteTestsTest
     public void InsuranceQuote_Age25_Exp3_Acdnt0_Quote2500()
     {
         //Arrange
-        driver.Navigate().GoToUrl("http://localhost/prog8170a04/prog8170a04/");
-        driver.Manage().Window.Size = new System.Drawing.Size(808, 708);
-
+        driver.Navigate().GoToUrl("http://localhost/prog8170a04/");
+        driver.Manage().Window.Size = new System.Drawing.Size(850, 736);
+       
         //Act
         driver.FindElement(By.CssSelector(".btn")).Click();
         driver.FindElement(By.Id("firstName")).Click();
         driver.FindElement(By.Id("firstName")).SendKeys("Amey");
-        driver.FindElement(By.Id("lastName")).SendKeys("Abraham");
-        driver.FindElement(By.Id("address")).SendKeys("3555 Fountain");
-        driver.FindElement(By.Id("city")).SendKeys("Mississauga");
-        driver.FindElement(By.Id("postalCode")).Click();
-        driver.FindElement(By.Id("postalCode")).SendKeys("L5M7E8");
-        driver.FindElement(By.Id("phone")).Click();
-        driver.FindElement(By.Id("phone")).SendKeys("4378957852");
-        driver.FindElement(By.Id("email")).Click();
+        driver.FindElement(By.Id("lastName")).SendKeys("Annamma");
+        driver.FindElement(By.Id("address")).SendKeys("3555 Fountain ");
+        driver.FindElement(By.Id("city")).SendKeys("Toronto");
+        driver.FindElement(By.Id("postalCode")).SendKeys("L5M 7E8");
+        driver.FindElement(By.Id("phone")).SendKeys("456-789-8952");
         driver.FindElement(By.Id("email")).SendKeys("amey@gmail.com");
-        driver.FindElement(By.Id("age")).Click();
-        driver.FindElement(By.Id("age")).SendKeys("27");
-        driver.FindElement(By.Id("age")).Click();
         driver.FindElement(By.Id("age")).SendKeys("25");
         driver.FindElement(By.Id("experience")).SendKeys("3");
         driver.FindElement(By.Id("accidents")).SendKeys("0");
         driver.FindElement(By.Id("btnSubmit")).Click();
-        driver.FindElement(By.Id("phone")).Click();
-        driver.FindElement(By.Id("phone")).SendKeys("437-895-7852");
-        driver.FindElement(By.Id("postalCode")).Click();
-        driver.FindElement(By.Id("postalCode")).SendKeys("L5M 7E8");
-        driver.FindElement(By.Id("btnSubmit")).Click();
-        
+       
         //Assert
         {
             string value = driver.FindElement(By.Id("finalQuote")).GetAttribute("value");
